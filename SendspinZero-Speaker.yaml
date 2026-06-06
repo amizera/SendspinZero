@@ -52,7 +52,7 @@ wifi:
 improv_serial:
 
 psram:
-  mode: quad
+  mode: octal
   speed: 80MHz
 
 captive_portal:
