@@ -1,7 +1,7 @@
 ## SendspinZero-Speaker. Edit the settings below.
 substitutions:
-  name: sendspinzero-speaker
-  friendly_name: SendspinZero-Speaker
+  name: speaker02
+  friendly_name: Speaker02
 
 ## SETTINGS ######################################################################################################################################
 
@@ -63,14 +63,14 @@ sendspin:
 
 i2s_audio:
   - id: i2s_audio_bus
-    i2s_lrclk_pin: GPIO4
-    i2s_bclk_pin: GPIO3
+    i2s_lrclk_pin: GPIO9
+    i2s_bclk_pin: GPIO8
 
 speaker:
   - platform: i2s_audio
     id: box_speaker
     i2s_audio_id: i2s_audio_bus
-    i2s_dout_pin: GPIO2
+    i2s_dout_pin: GPIO7
     dac_type: external
     channel: mono
 
