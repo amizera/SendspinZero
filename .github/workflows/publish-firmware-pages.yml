@@ -50,7 +50,11 @@ jobs:
           echo "Pages base URL: $PAGES_BASE_URL"
           echo "Firmware version: $FW_VERSION"
 
-          configs=(SendspinZero-Speaker.yaml)
+          configs=(
+            SendspinZero-Speaker01.yaml
+            SendspinZero-Speaker02.yaml
+            SendspinZero-Speaker03.yaml
+          )
           if [ ${#configs[@]} -eq 0 ]; then
             echo "No firmware config files found."
             exit 1
