@@ -76,13 +76,13 @@ jobs:
               --fw-version "$FW_VERSION"; then
               echo "OK: $config"
               python3 -c '
-              import json, sys
-              manifest = "site/" + sys.argv[1] + "/manifest.json"
-              with open(manifest, "r") as f: d = json.load(f)
-              for b in d.get("builds", []):
-                  if "parts" in b and len(b["parts"]) > 0:
-                      b["ota"] = {"path": b["parts"][0]["path"]}
-              with open(manifest, "w") as f: json.dump(d, f, indent=2)
+          import json, sys
+          manifest = "site/" + sys.argv[1] + "/manifest.json"
+          with open(manifest, "r") as f: d = json.load(f)
+          for b in d.get("builds", []):
+              if "parts" in b and len(b["parts"]) > 0:
+                  b["ota"] = {"path": b["parts"][0]["path"]}
+          with open(manifest, "w") as f: json.dump(d, f, indent=2)
               ' "$name"
             else
               echo "::error::FAILED: $config"
